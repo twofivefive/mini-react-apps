@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  justify-content: center;
+}
+
+.room {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.room > * {
+  margin: 0;
+}
+
+.status {
+  font-family: sans-serif;
+}
+
+button {
+  background: cornflowerblue;
+  border: 0;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  position: relative;
+}
+
+.on {
+  background-color: white;
+  color: black;
+}
+
+.off {
+  background-color: black;
+  color: white;
+}

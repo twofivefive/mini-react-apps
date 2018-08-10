@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './css/app.css';
+import './css/room.css';
 
 class Room extends Component {
   state = {
     isLit: true,
   }
-
+  
   flipSwitch = () => {
     this.setState({
       isLit: !this.state.isLit
@@ -14,15 +14,15 @@ class Room extends Component {
 
   render() {
     const isLit = this.state.isLit ? 'on' : 'off';
-
+    
     return (
       <div className="container">
         <div className={`room ${isLit}`}>
-          <h3>THE LIGHT IS </h3>
+          <p>THE LIGHT IS </p>
           <div className="status">
-            <p>{this.state.isLit ? ' ON 💡' : ' OFF 🔦'}</p>
+            <h1>{isLit.toUpperCase()}</h1>
           </div>
-          <button onClick={this.flipSwitch}>TURN {this.state.isLit ? ' OFF' : ' ON'}</button>
+          <button onClick={this.flipSwitch}>TURN {isLit === 'on' ? ' OFF' : ' ON'}</button>
         </div>
       </div>
     );
